@@ -41,7 +41,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
 Dancer.prototype.step = function() {
   console.log("Dancer's step is being called.");
   console.log(this.step);
-  setTimeout(this.step, 1000);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 
 };
 
