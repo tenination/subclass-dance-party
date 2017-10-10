@@ -20,8 +20,52 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
-  position:absolute;
+  position: absolute;
+
 }
+
+.orbitDancer{
+  border:10px solid yellow;
+  animation: myOrbit 2s linear infinite;
+}
+
+.bouncyDancer{
+  border:10px solid blue;
+  animation: bounce 5s linear infinite;
+}
+
+.lineUp{
+  animation: lineUp 5s linear;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes myOrbit {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  } 
+}
+
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(-30px);} 
+   60% {transform: translateY(-15px);} 
+} 
+
+
+@keyframes lineUp {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    top: 50vh;
+    /*transform: rotate(360deg) translateX(50px) rotate(-360deg);*/
+  } 
+}
+
